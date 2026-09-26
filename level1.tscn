@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dstc40a0idgug"]
+
+[ext_resource type="PackedScene" uid="uid://dl5occ73wrqlt" path="res://drag1.tscn" id="1_jwv3a"]
+[ext_resource type="Script" uid="uid://wiav287v1g4o" path="res://drag_1.gd" id="2_dopym"]
+[ext_resource type="Texture2D" uid="uid://c0e8uvnhaceid" path="res://icon.svg" id="2_ootpb"]
+[ext_resource type="Script" uid="uid://hl2xp07ip33c" path="res://collision_shape_2d.gd" id="4_v38iq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vk8dg"]
+size = Vector2(128, 128)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v38iq"]
+
+[node name="level1" type="Node2D" unique_id=368616424]
+
+[node name="drag1" parent="." unique_id=1806557997 instance=ExtResource("1_jwv3a")]
+position = Vector2(611, 319)
+texture = ExtResource("2_ootpb")
+script = ExtResource("2_dopym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drag1" unique_id=804890125]
+shape = SubResource("RectangleShape2D_vk8dg")
+
+[node name="bottomBorder" type="StaticBody2D" parent="." unique_id=2033368042]
+position = Vector2(475, 582)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottomBorder" unique_id=1377070235]
+position = Vector2(119.5, 70)
+shape = SubResource("WorldBoundaryShape2D_v38iq")
+script = ExtResource("4_v38iq")
