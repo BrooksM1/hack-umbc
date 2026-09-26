@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://blkjornv3hfq1"]
+
+[ext_resource type="Texture2D" uid="uid://dq4xy63jak4bu" path="res://object sheet(1).png" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=355321313]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ObjectSheet(1)" type="Sprite2D" parent="." unique_id=991222473]
+position = Vector2(322, 143)
+texture = ExtResource("1_0fbet")
+
+[node name="Panel" type="Panel" parent="." unique_id=1660031611]
+layout_mode = 0
+offset_left = 113.0
+offset_top = -31.0
+offset_right = 634.0
+offset_bottom = 67.0
